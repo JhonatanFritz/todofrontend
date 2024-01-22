@@ -1,0 +1,27 @@
+/* components/TaskCard/TaskCard.css */
+.taskcard {
+
+  border: 1px solid #dddddd;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  max-height: 200px;
+}
+
+.title {
+  color: #f0eff8;
+  font-size: 24px;
+}
+
+.description {
+  color: #fff8f8;
+}
+
+.status {
+  color: #d7d4d4;
+}
+.details {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+}

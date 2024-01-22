@@ -1,0 +1,57 @@
+/* RegisterForm.module.css */
+.registerContainer{
+    width: 100%;
+    height: 96dvh;
+    background-color: #2724e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+.registerContainer>span{
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+.registerForm {
+  max-width: 300px;
+  margin: 0 auto;
+
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color:#ffffff;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #d4e515;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #0d0225;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
