@@ -24,7 +24,7 @@ const Login = () => {
         return;
       }
 
-      const response = await fetch(`${apiUrl}/auth/login`, {
+      const response = await fetch(`https://backendtask-5822.onrender.com/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
