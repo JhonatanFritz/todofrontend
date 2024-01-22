@@ -59,20 +59,31 @@
   border: solid;
   border-color: #cbcbcb;
 }
-.btn{
-    background-color: #0964d3;
-    padding: 8px 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: bisque;
-    font-weight: 500;
-    font-size: 20px;
-    border: none;
-    
+.btn {
+  background-color: #0964d3;
+  padding: 8px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: bisque;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
 }
-.btn:hover{
-    background-color: #12437e;
+.btn:hover {
+  background-color: #12437e;
 }
-.btn:active{
-    background-color: #68a4ec;
+.btn:active {
+  background-color: #68a4ec;
+}
+.linkHomes {
+  text-decoration: none;
+  text-align: center;
+  color: #0964d3;
+  font-size: 18px;
+  font-weight: 600;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0964d3;
+  padding: 5px 15px;
+  border-radius: 8px;
 }

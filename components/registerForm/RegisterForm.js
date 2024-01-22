@@ -1,9 +1,10 @@
 // RegisterForm.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
-import styles from "./RegisterForm.module.css"; // Asegúrate de tener la ruta correcta
+import Link from "next/link";
+import styles from "./RegisterForm.module.css";
 
 const RegisterForm = ({ onRegister }) => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const RegisterForm = ({ onRegister }) => {
   });
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   const router = useRouter();
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,6 +24,16 @@ const RegisterForm = ({ onRegister }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validar campos no vacíos
+    if (!formData.username || !formData.password) {
+      // Notificación de error
+      toast.error("Por favor, completa todos los campos", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+      return;
+    }
 
     // Lógica para realizar el registro
     try {
@@ -44,15 +56,15 @@ const RegisterForm = ({ onRegister }) => {
         return;
       }
       // Notificación de éxito
-      toast.success("Registro exitoso, redirigiendo al Login", {
+      toast.success("Registro exitoso", {
         position: "top-right",
         autoClose: 3000,
       });
-      // Retardar la redirección
+      // Llevar a la página de inicio después de 2 segundos
       setTimeout(() => {
         onRegister();
-        router.push("./login");
-      }, 2500); // Retardo de 2 segundos (ajusta según tus necesidades)
+        router.push("/");
+      }, 2000); // Retardo de 2 segundos (ajusta según tus necesidades)
     } catch (error) {
       console.error("Error al manejar el registro:", error);
     }
@@ -82,10 +94,15 @@ const RegisterForm = ({ onRegister }) => {
             className={styles.input}
           />
         </label>
-        <button type="submit" className={styles.button}>
-          Registrarse
-        </button>
-        <ToastContainer />
+        <div  className={styles.actCont}>
+          <button type="submit" className={styles.button}>
+            Registrarse
+          </button>
+          <Link href="/" className={styles.linkHome}>
+            Ir a la página de inicio
+          </Link>
+          <ToastContainer />
+        </div>
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Login.module.css";
 
 const Login = () => {
@@ -88,6 +89,9 @@ const Login = () => {
             <button onClick={handleLogin} className={styles.btn}>
               Iniciar sesión
             </button>
+            <Link href="/" className={styles.linkHomes}>
+              👈 Inicio
+            </Link>
           </div>
         </div>
       </div>

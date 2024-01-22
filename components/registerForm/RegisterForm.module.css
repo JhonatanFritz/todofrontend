@@ -39,7 +39,14 @@
   height: 30px;
   font-size: 16px;
 }
-
+.actCont{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 .button {
   background-color: #d4e515;
   color: white;
@@ -55,3 +62,15 @@
 .button:hover {
   background-color: #45a049;
 }
+.linkHome{
+  background-color: #2fed55;
+  text-decoration: none;
+
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+}
+
